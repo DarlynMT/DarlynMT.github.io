@@ -1,0 +1,95 @@
+body {
+background-image: url("https://p4.wallpaperbetter.com/wallpaper/1/488/919/flag-flag-republic-dominican-wallpaper-preview.jpg");
+
+}
+
+header img {
+    height: 65px;
+    margin: 5px auto;
+    margin-left: 20px;
+} 
+header h1 {
+    margin: 0;
+    text-align: center;
+    margin-right: 60px;
+    color: #fff;
+    flex: 1;
+    font-size: 24px;
+}
+.container {
+    width: 600px;
+    display: grid;
+    place-items: center;
+    margin: 200px auto;
+    padding: 20px;
+    background-color: #transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 9, 0.9);
+    border-radius: 10px;
+}
+h1 {
+    margin-top: 0;
+    text-align: center;
+    color: rgba(237);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+}
+input[type="text"] {
+    padding: 10px;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+}
+#validar {
+    background-color: rgba(#F8F5F5);
+    border: none;
+    color: #666;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s;
+}
+  
+#validar:hover {
+    background-color: rgba(#F8F5F5);
+    color: #fff;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#resultado{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: "Helvetica Neue", Helvetica;
+    font-weight: bolder ;
+    color: #fff;
+    text-align: center;
+    display: none;
+}
+#aviso{
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: "Helvetica Neue", Helvetica;
+    font-weight: bolder ;
+    color: #fff;
+    text-align: center;
+    display: none;
+}
