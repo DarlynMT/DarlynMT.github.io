@@ -1,0 +1,7 @@
+{
+    "Comida":["biomas/bosque.jpg", "Chowfan", "Paella", "Moro de Gandule", "Moro de Habichuela", "Locrio de Cerdo", "Sancocho"],
+    "Pastel":["biomas/desierto.png", "Almendras", "Coco", "Tres Leche", "Fresas", "Chocolate"],
+    "Postre":["biomas/oceano.jpg", "Galleta de Avena", "Galleta de chocolate", "CupCake Vainilla", "CupCake Chocolate"],
+    "Bocadillos":["biomas/cueva.jpg", "Queso", "Jamon Cerrano", "Tortilla", "Waffles", "Tortilla francesa"],
+    "Bebidas":["biomas/nether.jpg", "Agua Dasani", "Coca-Cola", "Jugo", "Wisky", "Ron", "Vino"]
+}
