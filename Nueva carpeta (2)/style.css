@@ -33,7 +33,7 @@ body {
 nav {
     padding-left: 8%;
     padding-right: 8%;
-    background-color: #126d00;
+    background-color: #f27321;
     font-size: 16px;
     font-weight: lighter;
 }
@@ -59,7 +59,7 @@ nav ul li a {
 }
 
 nav ul li:hover {
-    background-color: #1c9904;
+    background-color: #f27321;
 }
 
 nav ul li:hover > ul {
