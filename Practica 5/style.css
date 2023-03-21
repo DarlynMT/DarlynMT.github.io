@@ -88,6 +88,11 @@ nav ul ul {
     transform: translateY(-10px);
 }
 
+nav ul ul img{
+    width: 0%;
+    height: 0%;
+}
+
 nav ul ul li {
     display: block;
     width: 100%;
