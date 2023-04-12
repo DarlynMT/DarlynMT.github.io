@@ -1,0 +1,294 @@
+*,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  h2{
+    font-size: 15px;
+    text-align: left;
+    height: 36px;
+    
+  }
+  
+  body {
+    background-color: darkseagreen;
+    font-family: cursive;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .last label, .solo label {
+    font-weight: 600;
+  }
+
+  input, select, textarea, p {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+
+  p {
+    border: none;
+    color: var(--data-text-color);
+    padding: 0;
+    padding-left: 0.5rem;
+    border-radius: none;
+  }
+  
+  .width-50 {
+    width: 50%;
+  }
+  
+  .ml-auto {
+    margin-left: auto;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+
+  .progressbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin: 2rem 4rem;
+  }
+  
+  .progressbar::before,
+  .progress {
+    content: "";
+    position: absolute;
+    top: 50%;
+    border-radius: 20px;
+    transform: translateY(-50%);
+    height: 2px;
+    width: 100%;
+    background-color: #dcdcdc;
+    z-index: -1;
+  }
+  
+  .progress {
+    background-color: var(--primary-color);
+    width: 0%;
+    transition: 0.3s;
+  }
+  
+  .progress-step {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    background-color: #FFFFFF;
+    border-radius: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .last-one::after{
+    right: -1%;
+  }
+  
+  .progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+  }
+  
+  .progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .progress-step-active {
+    background-color: rgb(18 188 247);
+    color: #f3f3f3;
+  }
+
+  .form {
+    margin: 30px 0;
+    width: clamp(1200px, 100%, 900px);
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 0.35rem;
+    padding: 1.5rem;
+  }
+  
+  .form-step {
+    display: none;
+    transform-origin: top;
+  }
+  
+  .form-step-active {
+    display: block;
+  }
+  
+  .container-twin{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .input-group {
+    width: 48%;
+    margin: 1rem 0;
+  }
+
+  .last {
+    width: 48%;
+    margin: 0.1rem 0;
+  }
+
+  .input-group-end {
+    width: 48%;
+  }
+  
+  .solo{
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  select {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 2px solid #ccc;
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  @keyframes animate {
+    from {
+      transform: scale(1, 0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1, 1);
+      opacity: 1;
+    }
+  }
+
+  .btns-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+.add-sintoma-cont, .add-pariente-cont, .add-internamiento-cont{
+    margin: 12px 13px;
+    padding: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    
+}
+
+#add-sintoma-btn, #add-pariente-btn, #add-internamiento-btn {
+    display: grid;
+    background-color: #ffffff;
+    border: none;
+    color: #12BCF7;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    height: 50px;
+    width: 145px;
+    padding: 14px 0;
+}
+  
+  .btn {
+    max-height: 60px;
+    margin-top: 20px;
+    padding: 0.75rem;
+    display: block;
+    text-decoration: none;
+    border-color: none;
+    background-color: #00E8FF;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 5.25rem;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  .btn:hover {
+transition : 1000ms;
+padding: 10px 50px;
+transform : translateY(-0px);
+background-color: #fff;
+color: #00E8FF;
+border: solid 2px #00E8FF;
+  }
+  
+  .removeBtnCtn{
+    width: 25px;
+    height: 25px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15%;
+  }
+
+  .error {
+    border-color: #ff4444;
+  }
+  
+  .error-message {
+    display: block;
+    margin-top: 0.5rem;
+    color: #ff4444;
+    font-size: 0.75rem;
+  }
+
+  hr{
+    margin-top: 30px;
+  }
+
+  .division{
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  @keyframes slide-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-out {
+    0% {
+      opacity: 1;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-200%);
+    }
+  }
+  
+  .sintoma.new {
+    animation-name: slide-in;
+    animation-duration: 0.5s;
+  }
+
+  .sintoma.exit {
+    animation-name: slide-out;
+    animation-duration: 0.5s;
+  }

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="form.js" defer></script>
+        <title>PRACTICA 6</title>
+    </head>
+    <body>
+        <form action="#" class="form">
+            <div class="progressbar">
+                <div class="progress" id="progress"></div>
+                
+                <div
+                class="progress-step progress-step-active"
+                data-title="Paciente"
+                ></div>
+                <div class="progress-step" data-title="Familiares"></div>
+                <div class="progress-step" data-title="Condiciones"></div>
+                <div class="progress-step" data-title="Visitas previas"></div>
+                <div class="progress-step last-one" data-title="Completado"></div>
+            </div>
+
+            <div class="form-step form-step-active">
+                <div class="container-twin">
+                    <div class="input-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre"/>
+                    </div>
+                    <div class="input-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido" id="apellido"/>
+                    </div>
+                </div>
+                <div class="container-twin">
+                    <div class="input-group">
+                        <label for="nacimiento">Nacimiento</label>
+                        <input type="date" name="nacimiento" id="nacimiento"/>
+                    </div>
+                    <div class="input-group">
+                        <label for="cedula">Cedula</label>
+                        <input type="text" name="cedula" id="cedula"/>
+                    </div>
+                </div>
+                <div class="container-twin">
+                    <div class="input-group">
+                        <label for="nacionalidad">Nacionalidad</label>
+                        <input type="text" name="nacionalidad" id="nacionalidad"/>
+                    </div>
+                    <div class="input-group">
+                        <label for="cedula">Tipo de Sangre</label>
+                        <select class="genero">
+                            <option value="">Seleccione</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="container-twin">
+                    <div class="input-group">
+                        <label for="telefono">Telefono</label>
+                        <input type="text" name="telefono" id="telefono"/>
+                    </div>
+                    <div class="input-group">
+                        <label for="genero">Genero</label>
+                        <select class="genero">
+                            <option value="">Seleccione</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="">
+                    <a type="submit" value="Siguiente" class="btn btn-next width-50 ml-auto">Siguiente</a>
+                </div>
+            </div>
+            <div class="form-step parientes">
+                <div class="pariente group-data">
+                    <div class="container-twin">
+                        <div class="input-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" id="nombre" />
+                        </div>
+                        <div class="input-group">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" name="apellido" id="apellido" />
+                        </div>
+                    </div>
+                    <div class="container-twin">
+                        <div class="input-group">
+                            <label for="parentezco">Parentezco</label>
+                            <input type="text" name="parentezco" id="parentezco" />
+                        </div>
+                        <div class="input-group">
+                            <label for="edad">Edad</label>
+                            <input type="text" name="edad" id="edad" />
+                        </div>
+                    </div>
+                    <div class="container-twin">
+                        <div class="input-group">
+                            <label for="telefono-principal">Telefono principal</label>
+                            <input type="text" name="telefono-principal" id="telefono-principal" />
+                        </div>
+                    </div>
+                </div>
+                <div class="add-pariente-cont">
+                    <a id="add-pariente-btn">Agregar otro pariente</a>
+                </div>
+                <div class="btns-group">
+                    <a href="#" class="btn btn-prev">Regresar</a>
+                    <a type="submit" value="Siguiente" class="btn btn-next">Siguiente</a>
+                </div>
+            </div>
+            <div class="form-step sintomas multiple-2">
+                <div class="sintoma group-data">
+                    <div class="container-twin">
+                        <div class="input-group">
+                            <label for="sintoma">Sintoma</label>
+                            <input type="text" name="sintoma" id="sintoma" />
+                        </div>
+                        <div class="input-group">
+                            <label for="tiempo">Tiempo padeciendolo</label>
+                            <input type="text" name="tiempo" id="tiempo" />
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="input-group solo">
+                            <label for="detalles">Detalles del sintoma</label>
+                            <textarea name="detalles" id="detalles" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-sintoma-cont">
+                    <a id="add-sintoma-btn">Otra Condiciones</a>
+                </div>
+                <div class="btns-group">
+                    <a href="#" class="btn btn-prev">Regresar</a>
+                    <a type="submit" value="Siguiente" class="btn btn-next">Siguiente</a>
+                </div>
+            </div>
+            <div class="form-step internamientos multiple-3">
+                <div class="internamiento group-data">
+                    <div class="container-twin">
+                        <div class="input-group">
+                            <label for="fecha">Fecha</label>
+                            <input type="date" name="fecha" id="fecha"/>
+                        </div>
+                        <div class="input-group">
+                            <label for="centro">Centro medico</label>
+                            <input type="text" name="hospital" id="centro"/>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="input-group solo">
+                            <label for="diagnostico">Diagnostico</label>
+                            <textarea name="diagnostico" id="diagnostico" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-internamiento-cont">
+                    <a id="add-internamiento-btn">Otras Visitas</a>
+                </div>
+                <div class="btns-group">
+                    <a href="#" class="btn btn-prev">Regresar</a>
+                    <a type="submit" value="Siguiente" class="btn btn-next">Siguiente</a>
+                </div>
+            </div>
+            <div class="form-step last-step">
+                <div class="btns-group review-btns">
+                    <a href="#" class="btn btn-prev">Editar</a>
+                    <a href="finish/finish.html" type="submit" value="Siguiente" class="btn btn-next">Finalizar</a>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
