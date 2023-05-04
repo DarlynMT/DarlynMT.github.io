@@ -1,0 +1,546 @@
+<!doctype html><html><head><style type="text/css">   <style>body {
+     margin: 0;
+     box-sizing: border-box;
+   }
+
+   /* CSS for header */
+   .dropdown {
+     display: inline-block;
+     position: relative;
+   }
+
+   .dropdown-content {
+     display: none;
+     position: absolute;
+     width: 100%;
+     overflow: auto;
+     box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+   }
+
+   .dropdown:hover .dropdown-content {
+     display: block;
+   }
+
+   .dropdown-content a {
+     display: block;
+     color: #000000;
+     background-color: #ffffff;
+     padding: 14px;
+     text-decoration: none;
+   }
+
+   .dropdown-content a:hover {
+     color: #000000;
+     background-color: #0000;
+     text-decoration: none;
+   }
+
+   /* hasta aqui Darlyn no te pases de la raya*/
+   .header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #f5f5f5;
+   }
+
+   .header .logo {
+     font-size: 25px;
+     font-family: 'Sriracha', cursive;
+     color: #000;
+     text-decoration: none;
+     margin-left: 30px;
+   }
+
+   .nav-items {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     background-color: #f5f5f5;
+     margin-right: 20px;
+   }
+
+   .nav-items a {
+     text-decoration: none;
+     color: #000;
+     padding: 35px 20px;
+   }
+
+   /* CSS for main element */
+   .intro {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     height: 520px;
+     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://puntacana-bavaro.com/wp-content/uploads/2022/05/Invencibles_Banreservas.jpg");
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+   }
+
+   .intro1 {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 80%;
+     height: 630px;
+     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://www.banreservas.com/Lists/Landings/Attachments/1/PENSIONADO-T1.jpg");
+     background-size: cover;
+     background-position: left;
+     background-repeat: no-repeat;
+   }
+
+   .intro2 {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: right;
+     width: 100%;
+     height: 520px;
+     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://www.banreservas.com/SiteAssets/Productos/Thumbnails/visa-flotilla-empresa.jpg");
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+   }
+
+
+   .intro h1 {
+     font-family: sans-serif;
+     font-size: 60px;
+     color: #fff;
+     font-weight: bold;
+     text-transform: uppercase;
+     margin: 0;
+   }
+
+   .intro2 h1 {
+     font-family: sans-serif;
+     font-size: 40px;
+     color: #fff;
+     font-weight: bold;
+     text-transform: uppercase;
+     margin: 0;
+   }
+
+
+   .intro p {
+     font-size: 20px;
+     color: #d1d1d1;
+     text-transform: uppercase;
+     margin: 20px 0;
+   }
+
+   .intro2 p {
+     font-size: 15px;
+     color: #d1d1d1;
+     text-transform: uppercase;
+     margin: 20px 0;
+   }
+
+   .intro button {
+     background-color: #f89420;
+     color: #fff;
+     padding: 10px 25px;
+     border: none;
+     border-radius: 5px;
+     font-size: 20px;
+     font-weight: bold;
+     cursor: pointer;
+     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+   }
+
+   .intro1 button {
+     background-color: #f89420;
+     color: #FFF;
+     padding: 10px 25px;
+     border: none;
+     border-radius: 5px;
+     font-size: 20px;
+     font-weight: bold;
+     cursor: pointer;
+     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+   }
+
+   .intro2 button {
+
+     background-color: transparent;
+     color: #f89420;
+     padding: 10px 25px;
+     border: none;
+     border-radius: 5px;
+     font-size: 20px;
+     font-weight: bold;
+     cursor: pointer;
+     box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.0);
+   }
+
+
+
+   .achievements {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     padding: 40px 80px;
+   }
+
+   .achievements .work {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 0 40px;
+   }
+
+   .achievements .work i {
+     width: fit-content;
+     font-size: 50px;
+     color: #333333;
+     border-radius: 50%;
+     border: 2px solid #333333;
+     padding: 12px;
+   }
+
+   .achievements .work .work-heading {
+     font-size: 20px;
+     color: #333333;
+     text-transform: uppercase;
+     margin: 10px 0;
+   }
+
+   .achievements .work .work-text {
+     font-size: 15px;
+     color: #585858;
+     margin: 10px 0;
+   }
+
+   .about-me {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 40px 80px;
+     border-top: 2px solid #eeeeee;
+   }
+
+   .about-me img {
+     width: 500px;
+     max-width: 100%;
+     height: auto;
+     border-radius: 10px;
+   }
+
+   .about-me-text h2 {
+     font-size: 30px;
+     color: #333333;
+     text-transform: uppercase;
+     margin: 0;
+   }
+
+   .about-me-text p {
+     font-size: 15px;
+     color: #585858;
+     margin: 10px 0;
+   }
+
+   /* CSS for footer */
+   .footer {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #264e72;
+     padding: 40px 80px;
+   }
+
+   .footer .copy {
+     color: #fff;
+   }
+
+   .bottom-links {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     padding: 40px 0;
+
+   }
+
+   .bottom-links .links {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 0 40px;
+   }
+
+   .bottom-links .links span {
+     font-size: 23px;
+     color: #ffffff;
+     text-transform: uppercase;
+     text-align: left;
+     margin: 10px 0;
+   }
+
+   .bottom-links .links a {
+     text-decoration: none;
+     color: #bdcad4;
+     padding: 5px 10px;
+   }
+
+   </style></head><body><style>ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     background-color: #264e72;
+   }
+
+   li {
+     float: left;
+   }
+
+   li a {
+     display: block;
+     color: white;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+   }
+
+   li a:hover {
+     background-color: #111;
+   }
+
+   .item {
+     opacity: 0.4;
+     transition: 0.4s ease all;
+     margin: 0 20px;
+     transform: scale(0.8);
+   }
+
+   @media (max-width: 1000px) {
+     .item {
+       margin: 0;
+       transform: scale(0.9);
+     }
+   }
+
+   .active .item {
+     opacity: 1;
+     transform: scale(1);
+   }
+</style></head><body><!DOCTYPE html>
+<html>
+
+<head>
+	<title>Banreservas.com</title>
+</head>
+
+<body>
+	<table>
+		<div class="dropdown">
+			<ul>
+				<li><a class="" href="">USD</a></li>
+				<div class="dropdown-content">
+					<a href="">Tasa de cambio Actual</a>
+					<a href="">USD$</a>
+					<a href="">EUR$</a>
+				</div>
+			</ul>
+		</div>
+		<div class="dropdown">
+			<ul>
+				<li><a class="" href="">Canales Banreservas</a></li>
+				<div class="dropdown-content">
+					<a href="">App Personall</a>
+					<a href="">App Empresas$</a>
+					<a href="">Cajeros Automaticos</a>
+					<a href="">Oficinas Comercilaes</a>
+					<a href="">Subagente Banreservas</a>
+					<a href="">Tu Banco Personal</a>
+					<a href="">TuBanco Empresas</a>
+					<a href="">Asistente virtual Banreservas</a>
+					<a href="">Tutorial Canales</a>
+					<a href="">Citas</a>
+				</div>
+			</ul>
+		</div>
+		<div class="dropdown">
+			<ul>
+				<li><a class="" href="">Sobre Nosotros</a></li>
+				<div class="dropdown-content">
+					<a href="">Vision,Mision y Valores</a>
+					<a href="">Voluntariado banreservas</a>
+					<a href="">Centro Cultural Banreservas</a>
+					<a href="">Responsabilidad social</a>
+					<a href="">Memorias anuales</a>
+					<a href="">Se parte de nosotros</a>
+					<a href="">Noticias y Prensa</a>
+					<a href="">Consejo de Directores</a>
+					<a href="">Principales Ejecutivos</a>
+					<a href="">Despacho del Administrador General</a>
+					<a href="">Ley Organica y Estatuos</a>
+					<a href="">Emisiones de Valores</a>
+					<a href="">Cuentas Inactivas</a>
+					<a href="">FATCA</a>
+					<a href="">Informes Financieros</a>
+					<a href="">Gobierno Corporativo</a>
+					<a href="">Contratos de Adhesion</a>
+					<a href="">Codigo de Etica</a>
+					<a href="">Manual de Politicas Anticorrupcion</a>
+				</div>
+			</ul>
+		</div>
+
+		<div class="dropdown">
+			<ul>
+				<li><a class="" href="">Mapa</a></li>
+				<div class="dropdown-content">
+					<a href=""></a>
+				</div>
+			</ul>
+		</div>
+
+		<div class="dropdown">
+			<ul>
+				<li><a class="" href="">Calculadora</a></li>
+				<div class="dropdown-content">
+					<a href=""></a>
+				</div>
+			</ul>
+		</div>
+
+		<div class="dropdown">
+			<ul>
+				<li><a class="" href="">Acceder a TuBanco</a></li>
+				<div class="dropdown-content">
+					<a href="">Personas</a>
+					<a href="">Empresas</a>
+					<a href="">Suscripcion</a>
+				</div>
+			</ul>
+		</div>
+	</table>
+	<header class="header">
+		<img src="https://www.banreservas.com/SiteAssets/logo.png?rev=43">
+		<nav class="nav-items">
+			<a href="#">Personal</a>
+			<a href="#">Referente</a>
+			<a href="#">PYME</a>
+			<a href="#">Empresarial</a>
+			<a href="#">Gubernamental</a>
+			<a href="#">Internacional</a>
+		</nav>
+	</header>
+
+	<table>
+		<ul>
+			<li><a class="active" href="#home">CUENTAS</a></li>
+			<li><a href="#news">INVERSIONES</a></li>
+			<li><a href="#contact">TARJETAS</a></li>
+			<li><a href="#about">PRESTAMOS</a></li>
+			<li><a href="#about">SEGUROS</a></li>
+			<li><a href="#about">REMESAS, IMPUESTOS Y SERVICIOS</a></li>
+		</ul>
+	</table>
+	<main>
+
+
+
+
+
+		<div class="intro">
+			<h1>Banco del Reservas</h1>
+			<p>El Bancos de los Dominicanos.</p>
+			<button>conoce más</button>
+		</div>
+		<tr>
+		<tr>
+
+			<table align="center">
+				<tr>
+					<td align="center" bgcolor="#264e72" width="20%">
+						<font face="arial black" alig="center" color="#FFFFFF" size="5">
+							<h2>Te apoyamos en cada etapa de tu vida</h2>
+							<div class="intro1">
+								<button>Conoce más ></button>
+							</div>
+						</font>
+					</td>
+				</tr>
+			</table>
+			<table>
+				<di>
+					<div class="intro2">
+						<h1>Tarjetas Débito<br>Banreservas</h1>
+							<p>¡Realiza tus pagos y compras de la manera más segura!</p>
+							<button>conoce más</button>
+					</div>
+				</di>
+			</table>
+	</main>
+	<footer class="footer">
+
+		<div class="bottom-links">
+
+			<div class="links">
+
+				<span>Contacto</span>
+				<a href="#">809-960-2121</a>
+				<a href="#">Encuentra una Oficina, Cajero o Subagente CERCA próximo a ti</a>
+				<a href="#">contacto@banreservas.com</a>
+				<a href="#">¿Deseas invertir en República Dominicana?</a>
+				<a href="#">Would you like to invest in the Dominican Republic?</a>
+				<a href="https://www.facebook.com/BanreservasRD"><i class="fab fa-facebook-f"></i></a>
+			</div>
+			<div class="links">
+				<span>Sobre Nosotros</span>
+				<a href="#">Visión, Misión y Valores</a>
+				<a href="#">Voluntariado banreservas</a>
+				<a href="#">Centro Cultural Banreservas</a>
+				<a href="#">Responsabilidad social</a>
+				<a href="#">Memorias anuales</a>
+				<a href="#">Sé parte de nosotros</a>
+				<a href="#">Consejo de Directores</a>
+				<a href="#">Principales Ejecutivos</a>
+				<a href="#">Despacho del Administrador General</a>
+				<a href="#">Ley Orgánica y Estatutos</a>
+				<a href="#">Emisiones de Valores</a>
+				<a href="#">Cuentas Inactivas</a>
+				<a href="#">FATCA</a>
+				<a href="#">Informes Financieros</a>
+				<a href="#">Gobierno Corporativo</a>
+				<a href="#">Contratos de Adhesión</a>
+				<a href="#">Códigos de Ética</a>
+				<a href="#">Manual de Políticas</a>
+				<a href="#">Anticorrupción</a>
+			</div>
+
+			<div class="links">
+				<span>FILIALES</span>
+				<a href="#">ARS Reservas</a>
+				<a href="#">Seguros Reservas</a>
+				<a href="#">AFP Reservas</a>
+				<a href="#">Fiduciaria Reservas</a>
+				<a href="#">AFI Reservas</a>
+				<a href="#">Inversiones & Reservas</a>
+				<a href="#">Inmobiliaria Reservas</a>
+				<a href="#">Fundación Reservas del País</a>
+				<a href="#">Educación Financiera</a>
+			</div>
+			<div class="links">
+				<span>FILIALES</span>
+				<a href="#">Tu seguridad</a>
+				<a href="#">Monitor financiero</a>
+				<a href="#">Tarifario de productos</a>
+				<a href="#">Tasas de referencia</a>
+				<a href="#">Bases de promociones</a>
+				<a href="#">Protección al Usuario</a>
+				<a href="#">Reclamaciones</a>
+				<a href="#">Lista bienes disponibles</a>
+				<a href="#">Propiedades bajo costo</a>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html></body><html>
